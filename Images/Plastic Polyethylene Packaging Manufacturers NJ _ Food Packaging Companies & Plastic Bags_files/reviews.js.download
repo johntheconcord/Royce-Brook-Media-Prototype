@@ -1,0 +1,312 @@
+setTimeout(function () {
+    var jQuery;
+    var hash;
+    // For Live
+    var assetsWiBaseURl = "https://reviewwidget.kpianalyser.com"; //for live
+    var assetsCdnBaseURL = 'https://v7push-5900.kxcdn.com';
+    var script_source = "https://reviewwidget.kpianalyser.com/js/reviews.js";
+
+    // // For localhost
+    // var assetsWiBaseURl = "http://localhost:8080/version7-newdc";// for localhost
+    // var assetsCdnBaseURL = "http://localhost:8080/version7-newdc";
+    // var script_source = "http://localhost:8080/version7-newdc/js/reviews.js";
+    
+    var link_tag = document.createElement('link');
+    link_tag.setAttribute("rel", "dns-prefetch");
+    link_tag.setAttribute("href", assetsCdnBaseURL);
+    (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(link_tag);
+
+    if (window.jQuery === undefined || window.jQuery.fn.jquery != '1.11.1') {
+        var script_tag = document.createElement('script');
+        script_tag.setAttribute("type", "text/javascript");
+        script_tag.setAttribute("src", assetsCdnBaseURL + "/js/jQuery.min.js");
+        if (script_tag.readyState) {
+            script_tag.onreadystatechange = function () { // For old versions of IE
+                if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                    scriptLoadHandler();
+                }
+            };
+        } else {
+            script_tag.onload = scriptLoadHandler;
+        }
+        (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
+    } else {
+        v6rwjq = window.jQuery;
+        main();
+    }
+    function scriptLoadHandler() {
+        // Restore $ and window.jQuery to their previous values and store the
+        // new jQuery in our local jQuery variable
+        v6rwjq = window.jQuery.noConflict(true);
+
+        if (window.jQuery === undefined) {
+            window.jQuery = v6rwjq;
+        }
+        // Call our main function -Demo 1st-aug-2014-web-widget
+        main();
+    }
+    /** ****** Our main function ******* */
+    function main() {
+        v6rwjq(function ($) {
+            if (typeof code !== "undefined" && typeof ucode !== "undefined") {
+                hash = code;
+            } else {
+                hash = $("body script[src$='"+script_source+"']").attr("data-id");
+            }
+            $.post(assetsWiBaseURl + "/displayReviews_v2/getWidgetConfig/", {code: hash},  function (rData, textStatus) {
+                // var fr = JSON.parse(rData);
+                var fr = $.parseJSON(rData);
+                var isMobile = false;
+                var iurl = fr.configUrl;
+                var autoLoadWidget = false;
+                if(fr.autoOpenOnLoad === true){
+                    autoLoadWidget = true;
+                }
+                var enableWidgetOnMobile = true;
+                if(fr.enableWidgetOnMobile === false){
+                    enableWidgetOnMobile = false;
+                }
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                    isMobile = true;
+                }
+                if (navigator.userAgent.match(/Mobi/)) {
+                    isMobile = true;
+                }
+
+                var enabledSchemaTag = false;
+                if(fr.enableSchemaTag === true){
+                    enabledSchemaTag = true;
+                    var schemaDetails = fr.schemaDetails;
+                }
+
+                var _rewAppModule = {
+                    ini: function () {
+                        this.run();
+                    },
+                    //run the app
+                    run: function () {
+                        // this._rewUtil.loadCss(assetsWiBaseURl + "/css/widget_v2.css");
+                        // this._rewUtil.loadCss(assetsWiBaseURl + "/css/widget_inner_v2.css");
+                        this._rewUtil.loadCss(assetsCdnBaseURL + "/css/widget_v2_min.css");
+                        this._rewUtil.loadCss(assetsCdnBaseURL + "/css/widget_inner_v2_min.css");
+                        if(fr.enableSchemaTag === true){
+                            this._rewSchemaDiv.create(schemaDetails);
+                        }
+                        this._rewMasterDiv.create();
+                        this._rewCheckBox.create();
+                        this._rewPane.outer.create();
+                        this._rewLabel.create();
+                        this._rewPane.innner.create();
+                        this._rewInnerPane.outer.create();
+                        this._adjustHeight.onWiLoad();
+                    },
+                    _rewUtil: {
+                        loadCss: function (path) {
+                            if (!$("link[href='" + path + "']").length) {
+                                v6rwjq('<link>', {
+                                    rel: 'stylesheet',
+                                    type: 'text/css',
+                                    href: path+"?sr=" + Math.floor((new Date()).getTime() / 60000),
+                                    async: true
+                                }).appendTo('head');
+                            }
+                        },
+                        loadJs: function (path) {
+                            var fileref = document.createElement('script');
+                            fileref.setAttribute("type", "text/javascript");
+                            fileref.setAttribute("src", path);
+                            (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(fileref);
+                        }
+                    },
+                    _rewSchemaDiv: {
+                        create: function (schemaDetails) {
+                            var schemaDiv = document.createElement('script');
+                            schemaDiv.setAttribute("id", "schemaDiv");
+                            schemaDiv.setAttribute("type", "application/ld+json");
+                            document.body.appendChild(schemaDiv);
+
+                            v6rwjq('#schemaDiv').html(schemaDetails);
+                        }
+                    },
+                    _rewMasterDiv: {
+                        create: function () {
+                            var masterDiv = document.createElement('div');
+                            masterDiv.setAttribute("id", "review_combo");
+                            masterDiv.setAttribute("class", "review_widcontroller");
+                            document.body.appendChild(masterDiv);
+
+                            if(enableWidgetOnMobile){
+                                var newA = document.createElement('a');
+                                newA.setAttribute('href', iurl + hash + "/m");
+                                if (fr.widgetPosition === "right") {
+                                    var mobile_icon_class = "mcw_mobile_widget floater_right";
+                                } else {
+                                    var mobile_icon_class = "mcw_mobile_widget floater_left";
+                                }
+                                newA.setAttribute('class', mobile_icon_class);
+                                newA.setAttribute("style", fr.mobileStyle);
+                                newA.setAttribute('target', "_blank");
+                                document.getElementById("review_combo").appendChild(newA);
+                            }
+                        }
+                    },
+                    _rewCheckBox: {
+                        create: function () {
+                            var lblCheckBox = document.createElement('input');
+                            lblCheckBox.setAttribute("type", 'checkbox');
+                            lblCheckBox.setAttribute("id", "mcw-togglebox");
+                            lblCheckBox.style.visibility = 'hidden';
+                            if(!isMobile && autoLoadWidget){
+                                lblCheckBox.setAttribute('checked', 'checked');
+                            }
+                            document.getElementById("review_combo").appendChild(lblCheckBox);
+                        }
+                    },
+                    _rewPane: {
+                        outer: {
+                            create: function () {
+                                var wrapper = document.createElement('div');
+                                wrapper.setAttribute("id", "dispmyreviews");
+                                if (fr.widgetPosition === "right") {
+                                    var preview_class = "mcw-slideout preview_bottom_right";
+                                } else {
+                                    var preview_class = "mcw-slideout preview_bottom_left";
+                                }
+                                wrapper.setAttribute("class", preview_class);
+                                document.getElementById("review_combo").appendChild(wrapper);
+                            }
+                        },
+                        innner: {
+                            create: function () {
+                                var iWrapper = document.createElement('div');
+                                iWrapper.setAttribute("id", "mcw-slideout_inner");
+                                iWrapper.style.height = '410px';
+                                document.getElementById("dispmyreviews").appendChild(iWrapper);
+                            }
+                        }
+                    },
+                    _rewInnerPane: {
+                        outer: {
+                            create: function () {
+                                var wrapper1 = document.createElement('div');
+                                wrapper1.setAttribute("id", "inner_box");
+                                wrapper1.setAttribute("class", "mcw_wrapper_box");
+                                wrapper1.style.visibility = 'hidden';
+                                wrapper1.innerHTML = this.innerHTML();
+                                document.getElementById("mcw-slideout_inner").appendChild(wrapper1);
+                            },
+                            innerHTML: function () {
+                                return '<div class="sk-cube-grid" id="_loader"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div><span>Loading</span></div>';
+                            }
+                        }
+                    },
+                    _rewLabel: {
+                        create: function () {
+                            var feedbackLabel = document.createElement('Label');
+                            feedbackLabel.setAttribute("id", "inner_id");
+                            feedbackLabel.setAttribute("class", "mcwHolder");
+                            feedbackLabel.setAttribute("for", "mcw-togglebox");
+                            feedbackLabel.setAttribute("style", fr.titleStyle);
+                            feedbackLabel.style.border = '#fff';
+                            feedbackLabel.innerHTML = "<em></em>" + fr.widgetTitle + "<i></i>";
+                            document.getElementById("dispmyreviews").appendChild(feedbackLabel);
+                        }
+                    },
+                    _rewContentDiv: {
+                        create: function () {
+                            var contentDiv = document.createElement('div');
+                            contentDiv.id = "iframe_id";
+                            contentDiv.width = "100%";
+                            contentDiv.height = 410;
+                            contentDiv.style.visibility = 'hidden';
+                            document.getElementById("inner_box").appendChild(contentDiv);
+                        },
+                        isLoaded: false,
+                        // iHieght: 0,
+                        loadFDiv: function () {
+                            v6rwjq.ajax({
+                                type : "POST",
+                                data : {code: hash},
+                                crossDomain : true,
+                                url : iurl,
+                            })
+                            .done(function(result) {
+                                v6rwjq('#iframe_id').html(result);
+                                document.getElementById('iframe_id').style.visibility = 'visible';
+                                v6rwjq('#_loader').remove();
+                            });
+                        }
+                    },
+                    _adjustHeight: {
+                        onWiLoad: function () {
+                            setTimeout(function () {
+                                $('#inner_id').attr("style", fr.titleStyle);
+                                // $('#inner_id').css("display", "block !important");
+                            }, 50);
+                        },
+                    }
+                };
+
+                _rewAppModule.ini();
+
+                // if (isMobile) {
+                    // setTimeout(function () {
+                    //     $('#inner_id').css("display", "block");
+                    // }, 500);
+
+                //     var mobileMasterDiv = document.createElement('div');
+                //     mobileMasterDiv.setAttribute("id", "review_combo");
+                //     mobileMasterDiv.setAttribute("class", "review_widcontroller");
+                //     document.body.appendChild(mobileMasterDiv);
+
+                //     var newA = document.createElement('a');
+                //     newA.setAttribute('href', iurl + "/m");
+                //     if (fr.widgetPosition === "right") {
+                //         var mobile_icon_class = "mcw_mobile_widget floater_right";
+                //     } else {
+                //         var mobile_icon_class = "mcw_mobile_widget floater_left";
+                //     }
+                //     newA.setAttribute('class', mobile_icon_class);
+                //     newA.setAttribute("style", fr.mobileStyle);
+                //     newA.setAttribute('target', "_blank");
+                //     document.getElementById("review_combo").appendChild(newA);
+                //     // document.body.appendChild(newA);
+                // } else {
+                if (!isMobile) {
+                    if (autoLoadWidget || enabledSchemaTag){
+                        setTimeout(function () {
+                            document.getElementById('inner_box').style.visibility = 'visible';
+                        }, 500);
+                        if (!_rewAppModule._rewContentDiv.isLoaded) {
+                            setTimeout(function () {
+                                _rewAppModule._rewContentDiv.create();
+                                _rewAppModule._rewContentDiv.loadFDiv();
+                            }, 2000);
+                            _rewAppModule._rewContentDiv.isLoaded = true;
+                        }
+                        if(!autoLoadWidget){
+                            $("#mcw-togglebox").trigger("change");
+                        }
+                        autoLoadWidget = false;
+                    }
+                }
+
+                $("#mcw-togglebox").change(function () {
+                    if (this.checked) {
+                        setTimeout(function () {
+                            document.getElementById('inner_box').style.visibility = 'visible';
+                        }, 500);
+                        if (!_rewAppModule._rewContentDiv.isLoaded) {
+                            setTimeout(function () {
+                                _rewAppModule._rewContentDiv.create();
+                                _rewAppModule._rewContentDiv.loadFDiv();
+                            }, 2000);
+                            _rewAppModule._rewContentDiv.isLoaded = true;
+                        }
+                    }
+                });
+                // }
+            });
+        });
+    }
+}, 30); // We call our anonymous function immediately

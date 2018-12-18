@@ -1,0 +1,346 @@
+@charset "utf-8";
+/* CSS Document */
+
+	@media screen and (max-width: 1200px) { 
+			#services-home {
+				padding-right: 8%;
+			}
+			
+		
+		} 
+		
+		@media screen and (max-width: 700px) {
+			#heading h1 {
+				padding-top: 15%;
+			}
+			
+			
+					
+		.centered {
+	font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: absolute; 
+    top: 25%; 
+	padding-bottom: 3%;
+    left: 50%;
+	font-weight: 100;
+	font-size: 10px;   
+    transform: translate(-50%, -50%);
+}
+		
+		.centered-line {
+			position: absolute;
+			top: 25%; 
+			height: 2%;
+			border-color: #317E52;
+			margin-left: 35%;
+			margin-right: 35%;
+			width: 0%; 
+			color: #317E52;
+			background-color: #317E52; 
+		}
+		
+		.centered-subhead {
+			font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			position: absolute;
+			top: 30%;
+			padding-bottom: 3%;
+			left: 25%;
+			right: 25%;
+			font-weight: 100; 
+			font-size: 15px;
+		}
+			#googleMap {
+				min-width: 100%;
+			}
+			
+		}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+		
+#navbar { 
+	min-width: 100%;
+	text-align: center; 
+	margin-top: 2%;
+  	display: block;
+	padding: 15px;
+  	transition: top 0.3s;
+}
+
+#navbar a {
+	color: #f2f2f2;  
+	font-size: 22px;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-weight: 500;
+	text-align: center;
+  	padding: 15px;
+  	text-decoration: none;
+}
+
+#navbar a:hover {
+  color: black;
+  border-bottom: solid 2px #000000;
+  display: inline;
+  padding-bottom: 5px; 
+}
+		
+
+
+		.about { 
+			min-width: 100%; 
+			height: 15%; 
+			background-color: #317E52;
+			color: white; 
+			padding-top: 5%;  
+			padding-bottom: 5%;
+		}
+		.about p {
+			margin-left: 20%;
+			margin-right: 20%;
+			padding-top: 2%;
+		}
+		
+		#heading {
+			font-family:'source-sans-pro', Arial, 'Arial Narrow', Calibri, 'Calibri Light';
+			font-size: 17px;
+			min-width: 100%; 
+			height: 100%;
+			padding-top: 2%; 
+			color: white;
+			text-align: center;
+			 
+		}
+		
+		
+		
+		#heading p {
+			font-size: 22px;
+		}
+
+.content { 
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+		
+	
+		
+		#services-home { 
+			font-family: "Libre Baskerville";
+			width: 100%;
+			height: 500px;  
+			margin-top: -1%;
+			padding-top: 2%;
+		}
+			
+.services-transition:hover {
+	opacity: 0.5;
+}
+	
+	
+
+
+			.footer-links {
+			float: right; 
+			padding-right: 2%;
+			color: white; 
+			text-decoration: none;
+		}
+		
+		.footer-links:hover {
+			text-decoration:underline;
+		}
+		
+		.container {
+	min-width: 100%;      
+    position: relative;
+    text-align: center; 
+    color: white;
+}
+		.container img {
+			position: inherit; 
+			right: 0;
+			bottom: 0;
+			background-size: 100%;
+			min-width: 100%;  
+			background-blend-mode: darken;
+		}
+		
+#myCarousel {
+	min-width: 100%; 
+	margin-left: -5%;
+	margin-right: -5%;
+}   
+
+		
+		
+		.centered {
+	font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: absolute; 
+    top: 25%; 
+	padding-bottom: 3%;
+    left: 50%;
+	font-weight: 100;
+	font-size: 50px;   
+    transform: translate(-50%, -50%);
+}
+		
+		.centered-line {
+			position: absolute;
+			top: 25%; 
+			height: 2%;
+			border-color: #317E52;
+			margin-left: 35%;
+			margin-right: 35%;
+			width: 30%; 
+			color: #317E52;
+			background-color: #317E52;
+		}
+		
+		.centered-subhead {
+			font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			position: absolute;
+			top: 30%;
+			padding-bottom: 3%;
+			left: 25%;
+			right: 25%;
+			font-weight: 100; 
+			font-size: 35px;
+		}
+		
+		
+.section {
+	padding: 40px 0px; 
+}
+		
+		.sectionw3-light-grey {
+	padding-bottom: 5%;
+	font-family: "Libre Baskerville";
+	padding-bottom: 5%;
+	padding-top: 5%;
+}
+		.w3-container {
+			margin-top: 5%;  
+		}
+		 
+		
+		.contact {
+			background-color: #317E52; 
+			color: white; 
+			font-size: 18px;  
+			font-family:'source-sans-pro', Arial, 'Arial Narrow', Calibri, 'Calibri Light';
+		
+		}
+		
+	
+		
+	
+
+	
+		input[type=text], select, textarea {
+	font-family: Poppins;
+	font-size: 18px;
+    width: 80%;
+    padding: 12px;
+	background: transparent;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+    border-bottom: 2px solid white;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+		 
+	
+   input[type=email], select, textarea {
+	font-family: Poppins;
+	font-size: 18px;
+	width: 80%;
+	padding: 10px;
+	background: transparent;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+    border-bottom: 2px solid white;
+    margin-top: 6px;
+    margin-bottom: 5px; 
+    resize: vertical; 
+		  }
+		
+
+		
+ 
+input[type=submit] {
+	font-family: Poppins; 
+    background-color: white;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+		
+		textarea {
+			color: white;
+			font-size: 18px;
+		}
+		
+		textarea::-webkit-input-placeholder {
+	color: white !important;
+			opacity: 0.5;
+		font-size: 22px;
+	}
+
+		  input, label, textarea { 
+			  font-size: 18px;
+		
+		  }
+		  
+input[type=submit]:hover {
+    background-color: white;
+}
+		
+
+		  
+		  input[type=text], placeholder {
+			  color: white;
+		  } 
+		input[type=email], placeholder {
+			color: white;
+		}
+		
+	
+		
+.clearfix{
+    clear:both
+}
+		
+		.button {
+    background-color: white; 
+    border: none;
+    color: black; 
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+		
+		.button:hover {
+			color: #4C91A7;
+		}
+		
+		.button2 {font-size: 14px;}
+		
+		

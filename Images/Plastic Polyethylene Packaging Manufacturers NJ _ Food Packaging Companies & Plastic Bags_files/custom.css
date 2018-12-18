@@ -1,0 +1,287 @@
+@media only screen and (min-width: 1400px)
+
+{
+	.page-id-22 .ContactBnr { background-position:0 -30px;}
+	/*.postid-49 .ContactBnr { background-position:0 -30px;}*/
+	
+}
+@media only screen and (min-width: 1800px)
+
+{
+	.page-id-22 .ContactBnr { background-position:0 -85px;}
+	/*.postid-49 .ContactBnr { background-position:0 -30px;}*/
+	/*.ContImg img{ height:100%;}*/
+}
+/*@media (min-width: 1200px) and (max-width: 1349px)
+{
+	.ContImg { height:708px;}
+	.Contact_Cntr_Bg { height:708px;}
+	
+}*/
+
+@media (min-width: 1200px) and (max-width: 1399px){
+	.Contact_BnrText01{ height:270px;}
+	
+}
+@media (min-width: 992px) and (max-width: 1199px)
+
+{
+	body{ padding:157px 0 0;}
+	/* Header */
+
+	.Nav a.navbar-brand { width:200px; padding:0 9px;}
+	.Nav ul li{ padding:0 7px;}
+	.Nav ul li a { letter-spacing:0;}
+	.Nav ul{ padding:0;}
+	
+	.HP_ContactUS{ padding:60px 75px 0;}
+	.HP_FoodPkg_Slider .bx-wrapper .bx-prev{ left:0;}
+	.HP_FoodPkg_Slider .bx-wrapper .bx-next{ right:0;}
+	.AbtBnrText h3{ font-size:50px;}
+	.Box_Pic{ margin-top:50%;}
+	.page-id-7 .Airline{ padding-top:0;}
+	.Contact_BnrText01{ height:270px;}
+	
+	.page-id-22 .ContactBnr { background-position:0 35px;}
+
+	/*.Contact_Cntr_Bg h2{ font-size:35px; padding-bottom:15px;}
+	.Contact_Cntr_Bg ul li h3{ font-size:16px;}
+	.Contact_Cntr_Bg ul li{ margin-bottom:25px;}
+	.Contact_Cntr_Bg ul{ margin-bottom:35px;}
+	.Contact_Cntr_Bg{ height:586px; padding:44px 0;}
+	.ContImg{ height:586px;}*/
+	.ContactUs{padding:100px 0 0px;}
+}
+
+
+
+@media only screen and (max-width: 991px) 
+
+{
+
+	/* Header */
+
+	.Hdr { line-height:normal; padding:5px 0 10px; border-bottom:2px solid #317e52;}
+
+	.Nav  { background:none; padding:0;}
+	.Nav .navbar-light .navbar-toggler { float:right; margin:45px 30px 0px 0; outline:none; border:2px solid #317e52; color:#317e52; background-color:transparent; cursor:pointer;}
+	.navbar-light .navbar-toggler{  background:url(../images/mbl_nav.png) no-repeat center center; background-size:50%;}
+
+	.Nav ul { width:100%; text-align:center; border-top:1px solid #4a4a4c; padding:10px 0 0; background:#317e52;}
+
+	.Nav ul:before { display:none;}
+
+	.Nav ul li { float:left; width:100%; text-align:center; background:none; padding:10px 5px;}
+
+	.Nav ul li:last-child { background-position:top center;}
+	
+	.page-id-22 .ContactBnr { background-position:center right; background-attachment:inherit; background-size:cover;}
+	.page-id-19 .ContactBnr { background-attachment:inherit; background-size:cover;}
+	
+
+/*	.Contact_Cntr_Bg h2{ font-size:35px; padding-bottom:15px;}
+	.Contact_Cntr_Bg ul li h3{ font-size:16px;}
+	.Contact_Cntr_Bg ul li{ margin-bottom:25px;}
+	.Contact_Cntr_Bg ul{ margin-bottom:35px;}
+	.Contact_Cntr_Bg{ height:586px; padding:44px 0;}
+	.ContImg{ height:586px;}*/
+
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px)
+
+{
+
+	body{ padding:130px 0 0;}
+	.HP_ContactUS{ padding:60px 40px 0;}
+	.AbtBnrText h3{ font-size:40px; line-height:68px;}
+	.AbtBnrText{ padding:75px 0;}
+	.HP_Produts ul li{ margin-bottom:30px;}
+	.HP_FoodPkg_Slider ul li .FoodPkgText{ width:100%; padding:0px 0 50px; text-align:center;}
+	.HP_FoodPkg_Slider ul li .FoodPkgText h2::after{ margin:0 auto; left:0;}
+	.HP_FoodPkg_Slider ul li .FoodPkgImage{ margin:0 auto; float:none;}
+	.About_Contact_Bg{ padding:44px 0 10px;}
+	.Airline{padding:40px 0;}
+	.Box_Pic{ margin-top:50%;}
+	.Contact_BnrText02 h1{ font-size:45px;}
+	.Product h3{ font-size:30px;}
+	.Product ul li a{ padding:0 20px; height:45px; line-height:40px; font-size:12px;}
+	.Hp_Green_Bg{ padding:50px 0;}
+	.SimpleProdct{ padding:50px 0;}
+	.Contact_BnrText01{ height:250px;}
+	.FtrBg{ padding:50px 0;}
+	.Ftr a.PDF_Logo{ margin:0 0 40px;}
+	.Value h2{ font-size:35px;}
+	.AirlineText ul li{ font-size:12px; line-height:28px;}
+	.Build{ padding:40px 0;}
+	.Build h3{ font-size:30px;}
+	.Capabilities{ padding:40px 0;}
+	.Capabilities h3{ font-size:30px;}
+	.Capabilities p{ font-size:14px;}
+	.Capabilities ul li .CapaInr h4{ font-size:20px;}
+	.Capabilities ul li .CapaInr ol li{ font-size:14px;}
+	.page-id-7 .Airline{ padding-top:0;}
+	
+	.Contact_Cntr_Bg h2{ font-size:26px;}
+	.Contact_Cntr_Bg ul li{ padding:20px 0;}
+	.Contact_Cntr_Bg ul li h3{ font-size:14px;}
+	.Contact_Cntr_Bg ul li i{ margin-right:10px;}
+	.Contact_Cntr_Bg ul{ margin-bottom:30px;}
+	.ContImg h3{ font-size:26px;}
+	.ContImg h4{ font-size:16px;}
+	.Contact_Cntr_Bg h5{ font-size:15px;}
+	.ContactUs{ padding:50px 0 0;}
+	
+}
+
+
+
+@media only screen and (max-width: 767px) 
+
+{
+	 body{ padding:80px 0 0;}
+	.Nav .navbar-light .navbar-toggler{ margin-top:15px;}
+	.Nav a.navbar-brand { width:240px;}
+	.Hdr{ z-index:10000;}
+	.SliderDiv{ height:400px;}
+	.HP_SliderText01{ height:400px;}
+	.HP_SliderText02 h1{ font-size:35px; padding-bottom:25px; margin-bottom:10px;}
+	.HP_SliderText02 p{ font-size:25px;}
+	.Value h2{ font-size:35px;}
+	.Hp_Green_Bg{ padding:40px 0;}
+	.HP_Produts ul li{ margin-bottom:20px; min-height:260px;}
+	.HP_Produts{ padding:40px 0;}
+	.HP_Produts ul li a{ display:inline-block;}
+	.AbtBnrText{ padding:75px 0;}
+	.AbtBnrText h3{ font-size:30px;}
+	.HP_FoodPkg_Slider ul li .FoodPkgText{ width:100%; padding:0px 0 50px; text-align:center;}
+	.HP_FoodPkg_Slider ul li .FoodPkgText h2::after{ margin:0 auto; left:0;}
+	.HP_FoodPkg_Slider ul li .FoodPkgImage{ margin:0 auto; float:none;}
+	.HP_ContactUS{ padding:0; width:60%; margin:0 auto; float:none; text-align:center;}
+	.HP_ContactUS ul li input[type="submit"]{ float:none;}
+
+	.Map{ width:100%; margin-bottom:30px;}
+	.About_Contact_Bg{ padding:44px 0 10px;}
+	.Contact_BnrText02 h1{ font-size:40px;}
+	.Contact_BnrText01{ height:250px;}
+	.SimpleProdct{ padding:40px 0;}
+	.Airline{padding:40px 0;}
+	.Box_Pic{ width:80%; margin:0 auto; float:none;}
+	.AirlineText, .AirlineText02{ padding:0;}
+	.Ftr ul li{ border:0px;}
+	.Build ul li{ padding:30px 0;}
+	.Build ul li .BuildLeft{ padding:0px 0 30px;}
+	.Build{ padding:30px 0 40px;}
+	.Build h3{ font-size:25px;}
+	.Build ul li .BuildRight h4{ font-size:18px;}
+	.Build ul li .BuildRight ol li{ font-size:13px; padding:0;}
+	.Capabilities{ padding:40px 0;}
+	.Capabilities h3{ font-size:25px;}
+	.Capabilities p{ font-size:14px;}
+	.Capabilities ul li .CapaInr h4{ font-size:20px;}
+	.Capabilities ul li .CapaInr ol li{ font-size:14px;}
+	.page-id-7 .Airline{ padding-top:0;}
+	.cboxPhoto{ width:100%!important;}
+	.ListingSingle ul li .ListingVerticle01 h2{ font-size:14px;}
+	.ListingSingle ul li{ width:22%;}
+	.ListingSingle ol li .ListingVerticle02 h2{ font-size:14px;}
+	
+	.Contact_Cntr_Bg h2{ font-size:26px;}
+	.Contact_Cntr_Bg ul li{ padding:20px 0;}
+	.Contact_Cntr_Bg ul li h3{ font-size:16px;}
+	.Contact_Cntr_Bg ul{ margin-bottom:30px;}
+	.ContImg h3{ font-size:26px;}
+	.ContImg h4{ font-size:16px;}
+	.Contact_Cntr_Bg h5{ font-size:15px;}
+	.ContactUs{ padding:50px 0 0;}
+	.ContImg{ margin-bottom:50px;}
+}
+
+
+
+@media only screen and (max-width: 575px) 
+
+{
+	
+	.Hdr{
+		position: relative !Important;
+		
+	}
+
+
+	
+
+	body{ padding:0px 0 0;}
+	.Nav a.navbar-brand { width:225px;}
+	/* Header */
+	.GalleryArea ul li{ width:50%;}
+	.Nav .navbar-light .navbar-toggler{ margin-right:0px;}
+	.Nav ul li { padding:5px;}
+	.ListingSingle ul li{ width:47%;}
+	.ListingSingle ol li{ width:47%;}
+	.SliderDiv{ height:300px;}
+	.HP_SliderText01{ height:300px;}
+	.HP_SliderText02 h1{ font-size:25px;}
+	.HP_SliderText02 h1::after{ width:60%;}
+	.HP_SliderText02 p{ font-size:18px; line-height:25px;}
+	.bx-wrapper .bx-controls-direction a{ top:80%;}
+	.HP_Produts ul li{ min-height: auto;}
+	.Value h2{ font-size:22px;}
+	.Value p{ font-size:14px;}
+	.HP_Produts h2{ font-size:30px; font-weight:700;}
+	.HP_Produts p{ font-size:15px; font-weight:400; padding:0 20px 50px;}
+	.HP_Produts{ padding:20px 0;}
+	.Hp_Green_Bg{ padding:20px 0 0;}
+	.AbtBnrText{ padding:25px 0;}
+	.AbtBnrText h3 { font-size:19px; line-height:40px;}
+	.HP_FoodPkg_Slider ul li .FoodPkgImage{ width:80%;}
+	.Map{ height:300px;}
+	.Map iframe{ height:100%;}
+	.HP_ContactUS{ padding:0 20px; width:100%;}
+	.HP_FoodPkg_Slider .bx-wrapper .bx-controls-direction a{ top:90%;}
+	.HP_FoodPkg_Slider .bx-wrapper .bx-prev{ left:0;}
+	.HP_FoodPkg_Slider .bx-wrapper .bx-next{ right:0;}
+	.Contact_BnrText02 h1{ font-size:30px;}
+	.Product h3{ font-size:22px;}
+	.Product ul li a{ left:14px;  padding:0 20px; height:45px; line-height:40px; font-size:12px;}
+	.Contact_BnrText01{ height:180px}
+	.Contact_BnrText02 h2{  font-size:20px;}
+	.Value h3{ font-size:22px;}
+	.Ftr ul li{ border:0px;}
+	.Ftr h3{ font-size:18px;}
+	
+	.Capabilities h3{ font-size:21px;}
+	.Capabilities ul li{ width:100%; float:left;}
+	.Capabilities ul li .CapaInr{ text-align:center; padding:36px 0 15px; height:auto;}
+	.Capabilities ul li .CapaInr h4::after{ margin:29px auto 0;}
+	
+	.Contact_Cntr_Bg h2{ font-size:23px; padding-bottom:14px;}
+	.Contact_Cntr_Bg ul li h3{ font-size:13px;}
+	.ContactUs{ text-align:center;}
+	.ContImg h3{ font-size:23px; padding-bottom:14px;}
+	.ContactBnr{ background-attachment:inherit; background-position:right center; background-size:100% 100%;}
+	.Contact_Cntr_Bg ul li i{ float:none; margin-right:0;}
+	.Contact_Cntr_Bg ul li h3{ float:none;}
+
+	/* 10 January 2017 Mds */
+	
+	/* Home Page */
+	
+	.page-id-7 .AbtBnrText h3 { font-size:40px; line-height:42px;}
+	.page-id-5 .AbtBnrText h3 { line-height:42px; font-size:40px;}
+	.page-id-7 .Value h2 { font-size:35px;}
+	.Value p a { font-size:15px; margin-bottom:5px;}
+	
+	.Product ul li a { font-size:11px; padding:0 10px; letter-spacing:1px;}
+	.Capabilities ul li .CapaInr { min-height:0;}
+	.Capabilities ul li .CapaInr ol {padding-left:0; list-style:disc inside;}
+	
+	.page-id-19 .Value h2 { font-size:35px;}
+	
+	.AirlineText, .AirlineText02 { text-align:center}
+	.Box_Pic{ text-align:center; margin:20px auto;}
+	.About_Contact_Bg { background-position:right center;}	
+}
